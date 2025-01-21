@@ -1,0 +1,181 @@
+/* 重置一些默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://wallpaperm.cmcm.com/fb468e384cacadb9ecd00fcb5377d3c2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #343a40;
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 整体容器 */
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(173, 216, 230, 0.8); /* 浅蓝色背景 */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* 毛玻璃效果 */
+    transition: all 0.3s ease; /* 动效 */
+}
+
+/* 容器hover效果 */
+.container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* hover效果 */
+}
+
+/* 标题 */
+h1 {
+    color: #1e90ff; /* 浅蓝色 */
+    font-size: 42px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, color 0.3s ease; /* 动效 */
+}
+
+h1:hover {
+    transform: scale(1.1); /* 悬停时放大 */
+    color: #3498db; /* 悬停时颜色变化 */
+}
+
+/* 子标题 */
+h3 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease; /* 动效 */
+}
+
+h3:hover {
+    transform: translateY(-5px); /* 悬停时微小上移 */
+    color: #1e90ff; /* 悬停时颜色变化 */
+}
+
+/* 公告区域 */
+.announcement {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    animation: slideUp 1s ease-out;
+    transition: transform 0.3s ease; /* 动效 */
+}
+
+.announcement:hover {
+    transform: translateY(-5px); /* 鼠标悬停时轻微上移 */
+}
+
+.announcement p {
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+/* 广告区域 */
+.advertisement {
+    background-color: rgba(241, 241, 241, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out;
+    transition: transform 0.3s ease; /* 动效 */
+}
+
+.advertisement:hover {
+    transform: translateY(-5px); /* 鼠标悬停时轻微上移 */
+}
+
+.advertisement a {
+    color: #3498db;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.advertisement a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+    transform: scale(1.1); /* 鼠标悬停时放大 */
+}
+
+/* 页脚 */
+.footer {
+    font-size: 16px;
+    color: #999;
+    transition: transform 0.3s ease;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+    transform: translateY(-3px); /* 悬停时微小上移 */
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .announcement p {
+        font-size: 16px;
+    }
+    .advertisement p {
+        font-size: 16px;
+    }
+}
